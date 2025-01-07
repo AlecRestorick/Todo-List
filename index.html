@@ -81,26 +81,45 @@
   </div>
 </div>
         
-<div class="mb-3">
-  <label for="textarea" class="form-label">Description</label>
-  <textarea
-    class="form-control"
-    id="textarea"
-    rows="5"
-    required
-  ></textarea>
-  <div class="invalid-feedback">
-    Please provide a task description.
-  </div>
-</div>
+        <div class="mb-3">
+          <label for="textarea" class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            id="textarea"
+            rows="5"
+            required
+          ></textarea>
+          <div class="invalid-feedback">
+            Please provide a task description.
+          </div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="dateInput" class="form-label">Due Date</label>
+          <input type="date" class="form-control" id="dateInput" required />
+          <div class="invalid-feedback">
+            Please select a due date.
+          </div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="selectPriority" class="form-label">Priority</label>
+          <select 
+            class="form-select" 
+            id="selectPriority"
+            required
+          >
+            <option value="">Select Priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a priority level.
+          </div>
+        </div>
 
-<div class="mb-3">
-  <label for="dateInput" class="form-label">Due Date</label>
-  <input type="date" class="form-control" id="dateInput" required />
-  <div class="invalid-feedback">
-    Please select a due date.
-  </div>
-</div>
+<!-- Work on me NB -->
 
 <div class="mb-3">
   <label for="notesInput" class="form-label">Notes</label>
