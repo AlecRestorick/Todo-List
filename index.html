@@ -7,17 +7,18 @@
 <script defer src="main.js"></script></head>
 <body>
 <div class="app container border-2">
-
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-
+<!-- Logo -->
   <a class="navbar-brand" href="#">
     <h2 class="my-2"> <i class="bi bi-clipboard-check"></i> To-Do App</h2>
   </a>
-
+<!-- Menu Button -->
 <button class="navbar-toggler border-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
+<!-- Nav Links -->
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav">
     <li class="nav-item">
@@ -27,7 +28,7 @@
       <a class="nav-link active" href="#projects">Projects</a>
     </li>
   </ul>
-
+<!-- Search -->
   <form class="d-flex my-2 w-100" role="search">
     <input class="form-control me-1 flex-grow-1" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success search border-2" type="submit">       
@@ -36,22 +37,24 @@
   </form>
 </div>
 </nav>
-
+<!-- Add new Task/Project -->
 <div id="addNew" data-bs-toggle="modal" data-bs-target="#form" class="d-grid">
   <button class="btn btn-outline-primary border-2 add my-2 mx-2" type="button">
   <span>Add New Task</span>
   <i class="bi bi-plus"></i>
 </button>
 </div>
+<!-- Tasks container -->
 <h4 class="my-3">Tasks</h4>
 <hr>
 <div id="tasks">
 </div>
+<!-- Projects Container -->
 <h4 class="my-3">Projects</h4>
 <hr>
 <div id="projects">
 </div>
-
+<!-- Add & Edit Task Model Form  -->
 <form
   class="modal fade needs-validation"
   id="form"
@@ -62,7 +65,6 @@
 >
 <div class="modal-dialog">
 <div class="modal-content">
-
 <div class="modal-header">
 <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
 <button
@@ -73,6 +75,7 @@
 ></button>
 </div>
 <div class="modal-body">
+  <!-- Title -->
 <div class="mb-3">
   <label for="textInput" class="form-label">Title</label>
   <input type="text" class="form-control" id="textInput" required />
@@ -80,47 +83,28 @@
     Please provide a task title.
   </div>
 </div>
-        
-        <div class="mb-3">
-          <label for="textarea" class="form-label">Description</label>
-          <textarea
-            class="form-control"
-            id="textarea"
-            rows="5"
-            required
-          ></textarea>
-          <div class="invalid-feedback">
-            Please provide a task description.
-          </div>
-        </div>
-        
-        <div class="mb-3">
-          <label for="dateInput" class="form-label">Due Date</label>
-          <input type="date" class="form-control" id="dateInput" required />
-          <div class="invalid-feedback">
-            Please select a due date.
-          </div>
-        </div>
-        
-        <div class="mb-3">
-          <label for="selectPriority" class="form-label">Priority</label>
-          <select 
-            class="form-select" 
-            id="selectPriority"
-            required
-          >
-            <option value="">Select Priority</option>
-            <option value="High">High</option>
-            <option value="Medium">Medium</option>
-            <option value="Low">Low</option>
-          </select>
-          <div class="invalid-feedback">
-            Please select a priority level.
-          </div>
-        </div>
-
-<!-- Work on me NB -->
-
+ <!--Description  -->
+<div class="mb-3">
+  <label for="textarea" class="form-label">Description</label>
+  <textarea
+    class="form-control"
+    id="textarea"
+    rows="5"
+    required
+  ></textarea>
+  <div class="invalid-feedback">
+    Please provide a task description.
+  </div>
+</div>
+  <!--Due Date  -->
+<div class="mb-3">
+  <label for="dateInput" class="form-label">Due Date</label>
+  <input type="date" class="form-control" id="dateInput" required />
+  <div class="invalid-feedback">
+    Please select a due date.
+  </div>
+</div>
+<!-- Notes -->
 <div class="mb-3">
   <label for="notesInput" class="form-label">Notes</label>
   <textarea
@@ -130,7 +114,7 @@
       placeholder="Add any additional notes here..."
   ></textarea>
 </div>
-
+<!-- Checklist -->
 <div class="mb-3">
   <label class="form-label">Checklist</label>
   <div id="checklistContainer">
@@ -140,7 +124,7 @@
        <i class="bi bi-plus"></i>
   </button>
 </div>
-
+<!-- Priority Level -->
 <div class="mb-3">
   <label for="selectPriority" class="form-label">Priority</label>
   <select 
@@ -157,7 +141,7 @@
     Please select a priority level.
   </div>
 </div>
-
+<!-- Directory Tasks/Projects -->
 <div class="mb-3">
   <label for="selectDirectory" class="form-label">Directory</label>
   <select 
@@ -170,24 +154,21 @@
     <option value="Projects">Projects</option>
   </select>
   <div class="invalid-feedback">
-    Please select a priority level.
+    Please select a directory.
   </div>
 </div>
-
 </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary border-2" data-bs-dismiss="modal">
-          <span>Close</span>
-        </button>
-        <button type="submit" id="add" class="btn btn-outline-primary border-2">
-          <span>Add</span>
-        </button>
-      </div>
-
-    </div>
-
-  </div>
+<!-- Add/Update and Close Model -->
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-secondary border-2" data-bs-dismiss="modal">
+    <span>Close</span>
+  </button>
+  <button type="submit" id="add" class="btn btn-outline-primary border-2">
+    <span>Add</span>
+  </button>
+</div>
+</div>
+</div>
 </form>
 </div>
 </body>
